@@ -1,0 +1,16 @@
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.9rem;
+  column-gap: 0.6rem;
+}
+
+.movie-card {
+  width: 190px;
+  min-height: 400px;
+  padding: 1rem 1.03rem 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #1d18381a;
+  background: #fff;
+  flex: 1 0 0;
+}

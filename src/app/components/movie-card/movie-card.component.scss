@@ -1,0 +1,58 @@
+.movie-poster {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.movie-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.movie-genre {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.3rem;
+  font-size: 0.8rem;
+  min-width: 150px;
+  margin: 0.625rem 0;
+}
+
+.movie-genre > span::after {
+  content: ",";
+  display: inline;
+}
+
+.movie-genre > span:last-child::after {
+  content: "";
+}
+
+.movie-year {
+  font-size: 0.8rem;
+  margin-bottom: 0.625rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0.625rem 0;
+}
+
+.like-btn-wrapper {
+  width: 48px;
+  height: 48px;
+  align-self: flex-end;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+}
+
+.like-btn-wrapper:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.like-btn {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,18 @@
+<div>
+  <img class="movie-poster" [src]="movie.poster" alt="{{ movie.name }}" />
+  <div class="wrapper">
+    <div class="movie-title">{{ movie.name }}</div>
+    <div class="movie-genre">
+      <span *ngFor="let genre of movie.genre| transformGenres">{{ genre }}</span>
+    </div>
+    <div class="movie-year">{{ movie.year }}</div>
+    <div class="like-btn-wrapper">
+      <app-heart (click)="addToFavorite(movie.id)" class="like-btn"></app-heart>
+      <app-heart-fill
+        *ngIf="getMovieIdFromLocalStorage() === movie.id"
+        (click)="removeFromFavorite()"
+        class="like-btn"
+      ></app-heart-fill>
+    </div>
+  </div>
+</div>
